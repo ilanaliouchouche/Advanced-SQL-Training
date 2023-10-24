@@ -1,0 +1,12 @@
+BEGIN;
+with RECURSIVE exo10(n) as(
+SELECT 1
+UNION ALL
+SELECT n+1
+FROM exo10
+WHERE n<=59
+   )
+
+SELECT * FROM exo10;
+
+END;
